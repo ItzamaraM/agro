@@ -20,16 +20,13 @@ void loop() {
   readValues();
   showValues();
   alarm();
-  
   delay(500);
-
 }
 
 //Read sensor values
 void readValues() {
   valHumo= analogRead(gas);
   valFlama= analogRead(flama);
-
 }
 
 //Show sensor Values
@@ -38,7 +35,6 @@ void showValues(){
   Serial.println(valFlama);
   Serial.print("El valor del humo es: ");
   Serial.println(valHumo);
-
 }
 
 //alarm
@@ -47,13 +43,5 @@ void alarm(){
     tone(buzzer, freq);
   } else {
     noTone(buzzer);
-  
   }
 }
-
-
-
-
-  
-  
-  
